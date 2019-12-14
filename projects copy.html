@@ -43,12 +43,52 @@
 			<section id="main" class="wrapper">
 				<div class="inner">
 					<div class="content">  
-						<!-- Title and Description -->   
-						<h2>Wow, look at these cool projects!</h2>       
+                        <h5><i>*Section In Progress*</i></h5>
+                        <!-- Title and Description -->                 
+                        <h2>My Projects</h2>  <hr>
+                        <p>Here is a collection of my current and past coding projects. These projects can range from introductions of key coding
+                            concepts and algorithms to end-to-end ML projects. For most projects, there will be a description and link to the GitHub
+                            repository or source files, but some projects will be adapted to work on the website using JavaScript.
+						</p> <br>
+						
+						<meta charset="utf-8">
+						<meta http-equiv="X-UA-Compatible" content="IE=edge">
+						<meta name="viewport" content="width=device-width, initial-scale=1.0">
+						<h3>MNIST</h3>
+						<p>Classifying hadwritten digits using a CNN with TensorFlow JS</p>
 						<ul class="actions">
-							<li><a id="simple-button" class="button primary">Press Me</a></li>
-						</ul>       
-                        
+								<li><a id="load-mnist-button" class="button primary">Load this Project</a></li>
+						</ul>
+						<br><br>
+
+
+						<h3>QMusic</h3>
+						<p><b><i>*In Development*</i></b><br>
+							This is my Music project from QMIND 2019. It is a machine learning application that uses an LSTM neural network
+							to generate original music based off any input image. It was trained using data from the 
+							<a href="https://developer.spotify.com/documentation/web-api/">Spotify API</a>, and each 30 second audio clip was
+							matched up with it's corresponding cover artwork. The neural net would predict what the audio should be for any given
+							input image, and slowly got better at making predictions and finding patterns. This project was developed in python, 
+							but I am currently converting the model to tensorflow js, so that it can be hosted with only JavaScript. For now, you can 
+							check out the GitHub repo for our project.
+						</p>
+						<ul class="actions">
+								<li><a id="load-qmusic-button" class="button primary">Load this Project</a></li>
+						</ul>
+						<br><br>						
+
+						<!-- Load Image for QMusic-->
+						<div id="console"></div>
+						<!-- Add an image that we will use to test -->
+						<img id="img" crossorigin src="https://i.imgur.com/2Pc7Q3W.jpg" width="227" height="227"/>
+
+                        <ul class="actions">
+                            <li><a id="upload-button" class="button">Upload Image</a></li>
+                            <li><a id="generate-button" class="button primary">Generate Song</a></li>
+						</ul>
+						
+						<p>Link to GitHub Repo:
+								<a href="https://github.com/QMIND-Team/QMIND-Music" class="icon fa-github fa-2x"><span class="label">Github</span></a> </p>
 								
 					</div>
 				</div>
@@ -86,7 +126,25 @@
 					&copy; Site Content: Sam Cantor, Site Design: <a href="https://templated.co/">TEMPLATED</a>
 				</div>
 			</div>
-        </footer>        
+        </footer>
+        
+        <script>
+            window.onload = function() {
+				document.querySelector('#load-mnist-button').addEventListener('click', function() {
+                	mnist();
+            	})
+				document.querySelector('#load-qmusic-button').addEventListener('click', function() {
+                	qmusic();
+            	})
+            	document.querySelector('#upload-button').addEventListener('click', function() {
+                	uploadModel();
+            	})
+            	document.querySelector('#generate-button').addEventListener('click', function() {
+            		downloadModel();
+              	})
+            }
+        </script>
+        
 
 		<!-- Scripts -->
 			<!-- Import TensorFlow.js -->
@@ -102,12 +160,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
             <script src="assets/js/main.js"></script>
-			<script src="assets/js/projects.js"></script>
-			
-			<!-- Button scripts -->
-			<script>
-				document.getElementById("simple-button").addEventListener("click", testFunction);
-			</script>
+            <script src="assets/js/projects.js" type="module"></script>
 
 	</body>
 </html>
