@@ -1,5 +1,5 @@
-async function testFunction() {
-  console.log('Hello world');
-  document.write("Hello World!");
+document.getElementById("get-time").onclick = function() {testFunction()};
+
+function testFunction() {
+  document.getElementById('time-output').innerHTML = Date();
 }
-window.testFunction = testFunction
