@@ -16,12 +16,12 @@
 	<body class="is-preload">
 
 		<!-- Header -->
-			<header id="header">
-				<a class="logo" href="index.html">Home</a>
-				<nav>
-					<a href="#menu">Menu</a>
-				</nav>
-			</header>
+		<header id="header">
+			<a class="logo" href="index.html">Home</a>
+			<nav>
+				<a href="#menu">Menu</a>
+			</nav>
+		</header>
 
 		<!-- Nav -->
         <nav id="menu">
@@ -29,32 +29,110 @@
 					<li><a href="index.html">Home</a></li>
 					<li><a href="resume.html">Resume & CV</a></li>
 					<li><a href="projects.html">Projects</a></li>
-					<!-- <li><a href="elements.html">Elements</a></li>
-					<li><a href="generic.html">Generic</a></li> -->
+					<li><a href="elements.html">Elements</a></li>
+					<li><a href="generic.html">Generic</a></li>
 				</ul>
 			</nav>
 
 		<!-- Heading -->
-			<div id="heading" >
-                <h1>Projects</h1>
-			</div>
+		<div id="heading" >
+			<h1>Projects</h1>
+		</div>
 
 		<!-- Main -->
-			<section id="main" class="wrapper">
-				<div class="inner">
-					<div class="content">  
-						<!-- Title and Description -->   
-						<h2>Wow, look at these cool projects!</h2>    
-						<h3>Press this button to get the current time</h3>   
-						<ul class="actions">
-							<li><a id="get-time" class="button primary">What time is it?</a></li>
-						</ul>    
-						<p id="time-output"></p> 
-                        
-								
+		<section id="main" class="wrapper">
+			<div class="inner">
+				<div class="content">  
+					<!-- Title and Description -->   
+					<h2>Projects and Demos</h2>  
+					<p>Here are some of the projects that I am currently working on...
+
+					</p>
+					<br>
+					
+					<!-- Web worker demo -->
+					<h3>Distributed Computing Using Web Workers</h3>
+					<p>The goal of this project is to showcase the use of the Web Worker API
+						for distributed computing. <br> <br>
+						The current demo searches for the amount of prime numbers in the range 0-400 by
+						giving each worker a range of 100 digits. In theory, this is not the most efficient
+						way to implement distributed computing for prime numbers, but this is just a demonstration
+						on how multiple web workers can be used to compute one big task.<br><br>
+						Status: <output id="worker-status"></output>
+					</p>
+					<button onclick="startWorkers()" class="primary noselect">Start Workers</button>
+					<button onclick="stopWorkers()">Stop Workers</button>
+					<br>
+					<br>
+					<!-- Table -->
+					<div class="table-wrapper">
+						<table>
+							<thead>
+								<tr>
+									<th>Worker</th>
+									<th>Current Task</th>
+									<th>Updates</th>
+									<th>Totals</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Worker 1</td>
+									<td>Finding primes in range [0-100]</td>
+									<td>Progress: Checking for prime number at <b><output id="w1d"></output></b>, Result: <b><output id="w1dr"></output></b></td>
+									<td><output id="w1t"></output></td>
+								</tr>
+								<tr>
+									<td>Worker 2</td>
+									<td>Finding primes in range [100-200] </td>
+									<td>Progress: Checking for prime number at <b><output id="w2d"></output></b>, Result: <b><output id="w2dr"></output></b></td>
+									<td><output id="w2t"></output></td>
+								</tr>
+								<tr>
+									<td>Worker 3</td>
+									<td>Finding primes in range [200-300] </td>
+									<td>Progress: Checking for prime number at <b><output id="w3d"></output></b>, Result: <b><output id="w3dr"></output></b></td>
+									<td><output id="w3t"></output></td>
+								</tr>
+								<tr>
+									<td>Worker 4</td>
+									<td>Finding primes in range [300-400] </td>
+									<td>Progress: Checking for prime number at <b><output id="w4d"></output></b>, Result: <b><output id="w4dr"></output></b></td>
+									<td><output id="w4t"></output></td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<td colspan="3"></td>
+									<td><output id="worker-total"></td>
+								</tr>
+							</tfoot>
+						</table>
 					</div>
+
+					<br>
+					<br>
+
+					<!-- Javascript Experimentation -->
+					<h3>Javascript Experimentation</h3>
+					<p>I use this space to test out different features and tricks in JavaScript,
+						so that I can hopefuly implement them in future projects.
+					</p>
+					<!-- Current time demo-->  
+					<h4>Press this button to get the current time</h4>   
+					<ul class="actions">
+						<li><a id="get-time" class="button primary noselect">What time is it?</a></li>
+					</ul>    
+					<p id="time-output"></p> 
+					<br>
+					<!-- Change text color demo -->
+					<h4>Click text to change color</h4>    
+					<p onclick="changeColour(this)" class="noselect">Click me!</p> 
+					<br>
+							
 				</div>
-			</section>
+			</div>
+		</section>
 
 		<!-- Footer -->
 		<footer id="footer">
@@ -97,7 +175,7 @@
 			<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@1.0.2/dist/tfjs-vis.umd.min.js"></script>
 
 			<!-- Data files -->
-			<script src ="assets/data/mnistdata.js" type="module"></script>
+			<!-- <script src ="assets/data/mnistdata.js" type="module"></scrip?t> -->
 
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
@@ -105,11 +183,30 @@
 			<script src="assets/js/util.js"></script>
             <script src="assets/js/main.js"></script>
 			<script src="assets/js/projects.js"></script>
+
+			<!-- Prefill table values -->
+			<script>
+				document.getElementById("worker-status").innerHTML = 'Not Running'
+
+				document.getElementById("w1d").innerHTML = "None"
+				document.getElementById("w1dr").innerHTML = "None"
+				document.getElementById("w1t").innerHTML = 0
+
+				document.getElementById("w2d").innerHTML = "None"
+				document.getElementById("w2dr").innerHTML = "None"
+				document.getElementById("w2t").innerHTML = 0
+
+				document.getElementById("w3d").innerHTML = "None"
+				document.getElementById("w3dr").innerHTML = "None"
+				document.getElementById("w3t").innerHTML = 0
+
+				document.getElementById("w4d").innerHTML = "None"
+				document.getElementById("w4dr").innerHTML = "None"
+				document.getElementById("w4t").innerHTML = 0
+
+				document.getElementById("worker-total").innerHTML = 0
+			</script>
 			
-			<!-- Button scripts -->
-			<!-- <script>
-				document.getElementById("demo").addEventListener("click", testFunction);
-			</script> -->
 
 	</body>
 </html>

@@ -1816,8 +1816,7 @@ ul.icons {
   background-image: url("../../images/campqmind.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  /* background-size: cover; */
-  background-size: 110%;
+  background-size: cover;
   border-top: 0;
   display: -ms-flexbox;
   height: 35rem !important;
@@ -2824,26 +2823,7 @@ body.is-menu-visible #menu {
   box-shadow: 0 0 1.5rem 0 rgba(0, 0, 0, 0.2);
   visibility: visible; }
 
-.loader-wrapper {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #242f3f;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-}
-.loader {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  position: relative;
-  /* top: 50%;                       ******* <- Remove this line ******** */
-  border: 4px solid #Fff;
-  animation: loader 2s infinite ease;
-}
+/* For my picture */
 .headshot {
   position: relative;
   height: calc(735px/2);
@@ -2858,4 +2838,17 @@ body.is-menu-visible #menu {
   margin-bottom: 1em;
   /* float: left; */
   margin: 0 auto;
+}
+
+/* Make some text noselect, like buttons.
+   Thanks to: https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting
+*/
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
 }
