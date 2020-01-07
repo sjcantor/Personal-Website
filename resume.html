@@ -36,113 +36,97 @@
 
 		<!-- Heading -->
 			<div id="heading" >
-				<h1>Resume & CV</h1>
+				<h1>Resume & Portfolio</h1>
 			</div>
 
 		<!-- Main -->
 			<section id="main" class="wrapper">
+				<div id="top"></div>
 				<div class="inner">
 					<div class="content">
-						<p><a href="assets/documents/SamCantorResume.pdf">PDF Version of Resume</a></p>
-						<header>
-							<h2>Sam Cantor</h2>
-						</header>
-						<p>s.cantor@queensu.ca | (+1) 289-221-8214 | https://www.linkedin.com/in/sam-cantor/</p>
-						<!-- Education -->
-						<h3>Education</h3>
-						<hr />
-						<h4><b>Bachelor of Applied Science</b>, Queen's University, Kingston, ON | September 2017 - Present</h3>
-						<ul>
-							<li>Specialization in Computer Engineering, intended graduation May 2021</li>
-							<li>Completed courses in Data Structues, Algorithms, Operating Systems, Software Development</li>
-							<li>Technical skills in cloud computing, machine learning and software development using Python, JavaScript, C/C++, Java</li>
-							<li>Recipient: Queen's Excellence Scholarship for an entering average of 90+</li>
-						</ul>
+						<!-- <p><a style="font-size: 20px;" href="assets/documents/SamCantorResume.pdf">Click for a PDF Resume</a></p> -->
+						<a style="font-size: 20px;" href="#resume">Skip to Resume</a></p>
+						<h1>Portfolio</h1> <br>
+						<!-- DCL -->
+						<h2>Cloud Computing & Machine Learning Internship</h2>
+						<p>
+							<span class="image left"><img src="images/DCL_Grey.svg" alt="DCL Logo" /></span>
+							I worked at <a href="https://distributed.computer/">Distributed Compute Labs</a> for 4 months as an R&D Intern. During my time at DCL, I developed 
+							new features and improvements to the back-end network, produced production quality code to the core platform 
+							and designed programs to accelerate image classification using Deep Learning. My back-end development included
+							designing and implementing a control framework for agents in a distributed network. This enabled developers to 
+							receive status updates from remote compute stations and send alerts or commands to redistribute tasks if needed.
+							<br><br><br>
+							<span class="image left"><img src="images/tensorflowjs_logo.png" alt="TFJS Logo" style="width:130px;height:130px;"/></span>
+							In addition to my work with the core platform, I also researched and developed new methods to accelerate the training times of Deep Learning models. Specifically, 
+							I tested different methods to parallelize stochastic gradient decent in neural networks. This enabled me to develop
+							a unique solution to train an image classification model using the compute power made availible by DCL. The program
+							accepts saved Keras models that can be built using Python and TensorFlow, and converts it to <a href="https://www.tensorflow.org/js">TensorFlow.js</a>.
+							You can select custom data that you want to train the model with, and configure features such as batch size and worker count
+							if desired. 
+							<div class="highlights">
+								<section>
+									<div class="content">
+										<header>
+											<a href="#" class="icon fa-vcard-o"><span class="label">Icon</span></a>
+											<h3>JavaScript</h3>
+										</header>
+									</div>
+								</section>
+							</div>
+							<i class="fab fa-node-js"></i>
+						</p>
 						<br>
-						<br>
-						<!-- Professional Experience -->
-						<h3>Professional Experience</h3>
-						<hr />
-						<h4><b>Cloud Computing & Machine Learning Intern</b>, Distributed Compute Labs, Kingston, ON</h4>
-						<ul>
-							<li>Worked on core development for the Distributed Compute Platform, with a specialization in machine learning</li>
-							<li>Designed and implemented a control framework for agents in a global distributed network</li>
-							<li>Developed methods to accelerate Deep Learning using asynchronous distributed computing</li>
-						</ul>
-						<br>
-						<br>
-						<!-- Extracurricular Experience -->
-						<h3>Extracurricular Experience</h3>
-						<hr />
-						<h4><b>QMIND - Queen's AI Hub</b>, Kingston, ON</h4>
-						<h5>R&D Project Manager | April 2019-Present</h5>
-						<ul>
-							<li>Managing the robotics and autonomous vehicles team in the Division of AI Research at QMIND</li>
-							<li>Implementing real-time object detection using neural networks to develop an intelligent robot perception 
-								system
-							</li>
-							<li>Providing tutorial sessions and resources for over 300 students in QMIND and Queen’s University, 
-								teaching them the key concepts of machine learning and how to deploy ML solutions on Microsoft Azure’s platform
-							</li>
-						</ul>
-						<h5>Design Team Member | September 2018-April 2019</h5>
-						<ul>
-							<li>Developed a program capable of generating original music based off any image</li>
-							<li>Implemented Deep Learning using an LSTM neural network, trained the model using data from the Spotify API</li>
-							<li>Gained experience with digital signal processing and machine learning</li>
-						</ul>
+						<!-- QMIND -->
+						<h2><span class="image right"><img src="images/qmind_logo.png" alt="QMIND Logo" /></span>
+							Project Manager and ML Developer</h2>
+						<p>
+							I am currently an executive member on the Queen's Machine Intelligence and Neuroevolution Design team (<a href="https://qmind.ca/">QMIND</a>), and have been 
+							on the team for over a year and a half. QMIND is a student-run AI hub for Queen's University in Kingston, with a goal of producing 
+							and designing computer based models using neural networks to develop unique solutions to problems. As a project manager, my role is 
+							to lead of group of five students in developing an end-to-end machine learning program during the school terms. This year, my team is 
+							focusing on robotics and autonomous vehicles, and is designing a computer vision solution to enhance robot perception. We are deploying
+							our solution on a <a href="http://www.robotis.us/turtlebot-3/">Turtlebot3 Robot</a>, and the program will use real-time object detection to search and navigate to any given object in 
+							a room. We will be presenting our final product at the Canadian Undergraduate Conference on Artificial Intelligence 
+							(<a href="https://www.facebook.com/events/the-westin-harbour-castle-toronto/canadian-undergraduate-conference-on-ai/432360644129084/">CUCAI</a>) 
+							in March, 2020.
+							<br><br><br>
+							<span class="image left"><img src="images/campqmind.jpg" alt="Camp QMIND" /></span>
+							When I am not working on my project, I help provide resources and training to QMIND members regarding key concepts of machine learning. 
+							I have provided presentation/tutorial sessions for over 200 students, teaching them the skills they need to train and deploy ML solutions 
+							on Microsoft Azure’s cloud computing platform. In my most recent presentation, I demonstrated how to create a simple machine learning
+							model for the <a href="http://yann.lecun.com/exdb/mnist/">MNIST Dataset</a> that could be deployed on a Microsoft Azure Notebook. The benifits to 
+							using Azure in this case would be the compute power, easy experimentation and ability to deploy your solution by creating a Docker, Web Service and 
+							REST API. You can find a copy of the Jupyter Notebook that I provided to the students <a href="https://notebooks.azure.com/s-cantor/projects/coffee-demo/html/mnist_demo.ipynb">here</a>.
 
-						<h4><b>Software Development Team Lead</b>, Engineering Society of Queen's University, Kingston, ON</h4>
-						<ul>
-							<li>Led a team in developing a ‘Smart’ Calendar that can import your school calendar 
-								and suggest times to add new events
-							</li>
-							<li>Practiced and experienced in team/project management, Java programming using Android Studio and GitHub
-								</li>
-						</ul>
-						<br>
-						<br>
-						<!-- Projects-->
-						<h3>Projects</h3>
-						<hr />
-						<h4><b>Fake News Detection using Artificial Intelligence</b>, Leaders Prize Competition | June 2019 - November 2019</h4>
-						<ul>
-							<li>Collaborated with four other Queen’s students to develop an artificial intelligence algorithm to rate news claims as true,
-									partly true or false, and provide evidence to support the rating, without human intervention
-								</li>
-							<li>Explored the use of Deep Learning, Gradient Boosted Decision Trees and Ensemble Methods for detecting features such as
-									sentiment analysis and credibility</li>
-						</ul>
-						<h4><b>Microsoft Hackference</b>, Hackathon | November 2019</h4>
-						<ul>
-							<li>Designed a solution to address the UN’s Sustainability Goal for quality education using NLP and Azure’s Cloud platform</li>
-							<li>Used the RoBERTa transformer model by Facebook to provide real-time vocabulary suggestions for students learning English,
-								 along with translations to their native language. Used Azure to test, register and deploy the model to an interactive web app
-								</li>
-						</ul>
-						<br>
-						<br>
-						<!-- Software Skills -->
-						<h3>Software Skills</h3>
-						<hr />
-						<p><b>Languages:</b> &nbsp; Python, JavaScript, C/C++, Java, Assembly></p>
-						<p><b>Software:</b> &nbsp; &nbsp; Machine learning (TensorFlow, Keras, PyTorch), data science (SQL, NumPy, pandas), agile development (GitHub, Bitbucket, Jira, Node.js), cloud
-							computing (Microsoft Azure, Distributed Compute Labs)
-							</p>
-						<br>
-						<br>
-						<!-- Interests -->
-						<h3>Interests</h3>
-						<hr />
-						<ul>
-							<li>Accomplished pianist with Grade 10 Piano from the Royal Conservatory of Music (RCM), training from Berklee College of Music, experience performing with notable artists, 
-								and trained in audio production
-							</li>
-						</ul>
-						<br>
-						<br>
-						<p>References Upon Request</p>
+						</p>
+						<br><br>
+						<!-- QMusic -->
+						<h2><span class="image right"><img src="images/qmusic_logo.png" alt="QMusic Logo" /></span>
+							Music Generation using AI - Project</h2>
+						<p>
+							On my previous year at QMIND, I worked with a group of students to develop an AI program that generates original music. 
+							For this project, we applied an LSTM neural network to recognize patterns between 30 second audio clips and their corresponding 
+							cover artwork. After training, we could test the model by sending any new image as an input, and the resulting output would 
+							be an original song generated by the neural network based on that image. After hosting the application on a website, the program 
+							could successfully generate and playback a unique short song based off any uploaded image, and this was demonstrated at the 
+							2019 Canadian Undergraduate Conference on AI. You can check out our project repository <a href="https://github.com/QMIND-Team/QMIND-Music">here</a>.
+							<br><br>
+							<span class="image left"><img src="images/spotify_logo.svg" alt="Spotify API"></img></span>
+							In order to successfully train our machine learning model, we needed to collect sufficient data. Using the Spotify Developers API, 
+							we were able to get data such as album artwork, song genre, tempo, key and 30 sample audio clips for over 500 songs. 
 
+						</p> 
+
+						
+
+						<!-- Resume -->
+						<div id="resume"></div>
+						<br><br>						
+						<h1>Resume</h1>
+						<iframe src="assets/documents/SamCantorResume.pdf" width="100%" height="500px"></iframe>
+						<br><br>
+						<a style="font-size: 20px;" href="#top">Back to Top</a></p>
 					</div>
 				</div>
 			</section>

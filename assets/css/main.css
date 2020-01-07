@@ -15,6 +15,7 @@ body {
   html, body {
     min-width: 320px; } }
 html {
+  scroll-behavior: smooth;
   box-sizing: border-box; }
 
 *, *:before, *:after {
@@ -2501,7 +2502,7 @@ body {
   -webkit-justify-content: center;
   -ms-justify-content: center;
   justify-content: center;
-  background-image: linear-gradient(rgba(17, 17, 17, 0.25), rgba(17, 17, 17, 0.25)), url("../../images/banner.jpg");
+  background-image: linear-gradient(rgba(17, 17, 17, 0.25), rgba(17, 17, 17, 0.25)), url("../../images/campqmind.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
